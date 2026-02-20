@@ -60,6 +60,10 @@ public class Q9 {
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
+
+        public void speak(){
+            System.out.println("i am an Animal");
+        }
     }
 
     public static class Reptile extends Animal{
@@ -98,6 +102,11 @@ public class Q9 {
                     ", dailyCalories=" + dailyCalories +
                     ", eggSize=" + eggSize +
                     '}';
+        }
+        
+        @Override
+        public void speak() {
+            System.out.println("i am a Reptile");
         }
     }
 
@@ -138,11 +147,17 @@ public class Q9 {
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
+        
+        @Override
+        public void speak() {
+            System.out.println("i am a Bird");
+        }
     }
 
     public static class Mammal extends Animal{
         protected int dailyMilk;
         protected int birthMonths;
+        protected int caloriesPerLiter;
 
         public Mammal(String name, int birthYear, boolean predator, double dailyCalories, int dailyMilk, int birthMonths) {
             super(name, birthYear, predator, dailyCalories);
@@ -177,6 +192,16 @@ public class Q9 {
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
+
+        @Override
+        public void eat(int calories) {
+            this.dailyCalories += caloriesPerLiter*dailyMilk;
+        }
+        
+        @Override
+        public void speak() {
+            System.out.println("i am a Mammal");
+        }
     }
 
     public static class Turtle extends Reptile{
@@ -196,6 +221,11 @@ public class Q9 {
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
+        }
+        
+        @Override
+        public void speak() {
+            System.out.println("i am a Turtle");
         }
     }
 
@@ -217,6 +247,11 @@ public class Q9 {
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
+        
+        @Override
+        public void speak(){
+            System.out.println("i am a Snake");
+        }
     }
 
     public static class Parrot extends Bird{
@@ -237,6 +272,11 @@ public class Q9 {
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
+        
+        @Override
+        public void speak() {
+            System.out.println("i am a Parrot");
+        }
     }
 
     public static class Peacock extends Bird{
@@ -255,6 +295,11 @@ public class Q9 {
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
+        }
+        
+        @Override
+        public void speak() {
+            System.out.println("i am a Peacock");
         }
     }
 
@@ -297,6 +342,11 @@ public class Q9 {
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
+        
+        @Override
+        public void speak() {
+            System.out.println("i am a Dog");
+        }
     }
 
     public static class Whale extends Mammal{
@@ -337,6 +387,11 @@ public class Q9 {
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
+        }
+        
+        @Override
+        public void speak() {
+            System.out.println("i am a Whale");
         }
     }
 
