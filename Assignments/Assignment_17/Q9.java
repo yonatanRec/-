@@ -46,6 +46,20 @@ public class Q9 {
         public void setDailyCalories(double dailyCalories) {
             this.dailyCalories = dailyCalories;
         }
+
+        public void eat(int calories){
+            this.dailyCalories += calories;
+        }
+
+        @Override
+        public String toString() {
+            return "Animal{" +
+                    "name='" + name + '\'' +
+                    ", birthYear=" + birthYear +
+                    ", predator=" + predator +
+                    ", dailyCalories=" + dailyCalories +
+                    '}';
+        }
     }
 
     public static class Reptile extends Animal{
@@ -72,6 +86,18 @@ public class Q9 {
 
         public void setTailSize(int tailSize) {
             this.tailSize = tailSize;
+        }
+
+        @Override
+        public String toString() {
+            return "Reptile{" +
+                    "tailSize=" + tailSize +
+                    ", name='" + name + '\'' +
+                    ", birthYear=" + birthYear +
+                    ", predator=" + predator +
+                    ", dailyCalories=" + dailyCalories +
+                    ", eggSize=" + eggSize +
+                    '}';
         }
     }
 
@@ -100,6 +126,18 @@ public class Q9 {
         public void setWingSpan(int wingSpan) {
             this.wingSpan = wingSpan;
         }
+
+        @Override
+        public String toString() {
+            return "Bird{" +
+                    "beakSize=" + beakSize +
+                    ", wingSpan=" + wingSpan +
+                    ", name='" + name + '\'' +
+                    ", birthYear=" + birthYear +
+                    ", predator=" + predator +
+                    ", dailyCalories=" + dailyCalories +
+                    '}';
+        }
     }
 
     public static class Mammal extends Animal{
@@ -127,6 +165,18 @@ public class Q9 {
         public void setBirthMonths(int birthMonths) {
             this.birthMonths = birthMonths;
         }
+
+        @Override
+        public String toString() {
+            return "Mammal{" +
+                    "dailyMilk=" + dailyMilk +
+                    ", birthMonths=" + birthMonths +
+                    ", name='" + name + '\'' +
+                    ", birthYear=" + birthYear +
+                    ", predator=" + predator +
+                    ", dailyCalories=" + dailyCalories +
+                    '}';
+        }
     }
 
     public static class Turtle extends Reptile{
@@ -134,6 +184,18 @@ public class Q9 {
 
         public Turtle(String name, int birthYear, boolean predator, double dailyCalories, int eggSize, int tailSize) {
             super(name, birthYear, predator, dailyCalories, eggSize, tailSize);
+        }
+
+        @Override
+        public String toString() {
+            return "Turtle{" +
+                    "eggSize=" + eggSize +
+                    ", tailSize=" + tailSize +
+                    ", name='" + name + '\'' +
+                    ", birthYear=" + birthYear +
+                    ", predator=" + predator +
+                    ", dailyCalories=" + dailyCalories +
+                    '}';
         }
     }
 
@@ -143,6 +205,18 @@ public class Q9 {
         public Snake(String name, int birthYear, boolean predator, double dailyCalories, int eggSize, int tailSize) {
             super(name, birthYear, predator, dailyCalories, eggSize, tailSize);
         }
+
+        @Override
+        public String toString() {
+            return "Snake{" +
+                    "eggSize=" + eggSize +
+                    ", tailSize=" + tailSize +
+                    ", name='" + name + '\'' +
+                    ", birthYear=" + birthYear +
+                    ", predator=" + predator +
+                    ", dailyCalories=" + dailyCalories +
+                    '}';
+        }
     }
 
     public static class Parrot extends Bird{
@@ -151,12 +225,36 @@ public class Q9 {
         public Parrot(String name, int birthYear, boolean predator, double dailyCalories, int beakSize, int wingSpan) {
             super(name, birthYear, predator, dailyCalories, beakSize, wingSpan);
         }
+
+        @Override
+        public String toString() {
+            return "Parrot{" +
+                    "beakSize=" + beakSize +
+                    ", wingSpan=" + wingSpan +
+                    ", name='" + name + '\'' +
+                    ", birthYear=" + birthYear +
+                    ", predator=" + predator +
+                    ", dailyCalories=" + dailyCalories +
+                    '}';
+        }
     }
 
     public static class Peacock extends Bird{
 
         public Peacock(String name, int birthYear, boolean predator, double dailyCalories, int beakSize, int wingSpan) {
             super(name, birthYear, predator, dailyCalories, beakSize, wingSpan);
+        }
+
+        @Override
+        public String toString() {
+            return "Peacock{" +
+                    "beakSize=" + beakSize +
+                    ", wingSpan=" + wingSpan +
+                    ", name='" + name + '\'' +
+                    ", birthYear=" + birthYear +
+                    ", predator=" + predator +
+                    ", dailyCalories=" + dailyCalories +
+                    '}';
         }
     }
 
@@ -185,6 +283,20 @@ public class Q9 {
         public void setPrimaryColor(String primaryColor) {
             this.primaryColor = primaryColor;
         }
+
+        @Override
+        public String toString() {
+            return "Dog{" +
+                    "type='" + type + '\'' +
+                    ", primaryColor='" + primaryColor + '\'' +
+                    ", dailyMilk=" + dailyMilk +
+                    ", birthMonths=" + birthMonths +
+                    ", name='" + name + '\'' +
+                    ", birthYear=" + birthYear +
+                    ", predator=" + predator +
+                    ", dailyCalories=" + dailyCalories +
+                    '}';
+        }
     }
 
     public static class Whale extends Mammal{
@@ -211,6 +323,20 @@ public class Q9 {
 
         public void setLength(int length) {
             this.length = length;
+        }
+
+        @Override
+        public String toString() {
+            return "Whale{" +
+                    "diveDepth=" + diveDepth +
+                    ", length=" + length +
+                    ", dailyMilk=" + dailyMilk +
+                    ", birthMonths=" + birthMonths +
+                    ", name='" + name + '\'' +
+                    ", birthYear=" + birthYear +
+                    ", predator=" + predator +
+                    ", dailyCalories=" + dailyCalories +
+                    '}';
         }
     }
 
