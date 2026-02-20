@@ -4,13 +4,13 @@ public class Q9 {
 
     public static class Animal{
         protected String name;
-        protected int birthYear;
+        protected int age;
         protected boolean predator;
         protected double dailyCalories;
 
-        public Animal(String name, int birthYear, boolean predator, double dailyCalories) {
+        public Animal(String name, int age, boolean predator, double dailyCalories) {
             this.name = name;
-            this.birthYear = birthYear;
+            this.age = age;
             this.predator = predator;
             this.dailyCalories = dailyCalories;
         }
@@ -23,12 +23,12 @@ public class Q9 {
             this.name = name;
         }
 
-        public int getBirthYear() {
-            return birthYear;
+        public int getAge() {
+            return age;
         }
 
-        public void setBirthYear(int birthYear) {
-            this.birthYear = birthYear;
+        public void setBirthYear(int age) {
+            this.age = age;
         }
 
         public boolean isPredator() {
@@ -55,7 +55,7 @@ public class Q9 {
         public String toString() {
             return "Animal{" +
                     "name='" + name + '\'' +
-                    ", birthYear=" + birthYear +
+                    ", age=" + age +
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
@@ -70,8 +70,8 @@ public class Q9 {
         protected int eggSize;
         protected int tailSize;
 
-        public Reptile(String name, int birthYear, boolean predator, double dailyCalories, int eggSize, int tailSize) {
-            super(name, birthYear, predator, dailyCalories);
+        public Reptile(String name, int age, boolean predator, double dailyCalories, int eggSize, int tailSize) {
+            super(name, age, predator, dailyCalories);
             this.eggSize = eggSize;
             this.tailSize = tailSize;
         }
@@ -97,13 +97,13 @@ public class Q9 {
             return "Reptile{" +
                     "tailSize=" + tailSize +
                     ", name='" + name + '\'' +
-                    ", birthYear=" + birthYear +
+                    ", age=" + age +
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     ", eggSize=" + eggSize +
                     '}';
         }
-        
+
         @Override
         public void speak() {
             System.out.println("i am a Reptile");
@@ -114,8 +114,8 @@ public class Q9 {
         protected int beakSize;
         protected int wingSpan;
 
-        public Bird(String name, int birthYear, boolean predator, double dailyCalories, int beakSize, int wingSpan) {
-            super(name, birthYear, predator, dailyCalories);
+        public Bird(String name, int age, boolean predator, double dailyCalories, int beakSize, int wingSpan) {
+            super(name, age, predator, dailyCalories);
             this.beakSize = beakSize;
             this.wingSpan = wingSpan;
         }
@@ -142,12 +142,12 @@ public class Q9 {
                     "beakSize=" + beakSize +
                     ", wingSpan=" + wingSpan +
                     ", name='" + name + '\'' +
-                    ", birthYear=" + birthYear +
+                    ", age=" + age +
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
-        
+
         @Override
         public void speak() {
             System.out.println("i am a Bird");
@@ -159,8 +159,8 @@ public class Q9 {
         protected int birthMonths;
         protected int caloriesPerLiter;
 
-        public Mammal(String name, int birthYear, boolean predator, double dailyCalories, int dailyMilk, int birthMonths) {
-            super(name, birthYear, predator, dailyCalories);
+        public Mammal(String name, int age, boolean predator, double dailyCalories, int dailyMilk, int birthMonths) {
+            super(name, age, predator, dailyCalories);
             this.dailyMilk = dailyMilk;
             this.birthMonths = birthMonths;
         }
@@ -187,7 +187,7 @@ public class Q9 {
                     "dailyMilk=" + dailyMilk +
                     ", birthMonths=" + birthMonths +
                     ", name='" + name + '\'' +
-                    ", birthYear=" + birthYear +
+                    ", age=" + age +
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
@@ -197,7 +197,7 @@ public class Q9 {
         public void eat(int calories) {
             this.dailyCalories += caloriesPerLiter*dailyMilk;
         }
-        
+
         @Override
         public void speak() {
             System.out.println("i am a Mammal");
@@ -207,8 +207,8 @@ public class Q9 {
     public static class Turtle extends Reptile{
 
 
-        public Turtle(String name, int birthYear, boolean predator, double dailyCalories, int eggSize, int tailSize) {
-            super(name, birthYear, predator, dailyCalories, eggSize, tailSize);
+        public Turtle(String name, int age, boolean predator, double dailyCalories, int eggSize, int tailSize) {
+            super(name, age, predator, dailyCalories, eggSize, tailSize);
         }
 
         @Override
@@ -217,12 +217,12 @@ public class Q9 {
                     "eggSize=" + eggSize +
                     ", tailSize=" + tailSize +
                     ", name='" + name + '\'' +
-                    ", birthYear=" + birthYear +
+                    ", age=" + age +
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
-        
+
         @Override
         public void speak() {
             System.out.println("i am a Turtle");
@@ -232,8 +232,8 @@ public class Q9 {
     public static class Snake extends Reptile{
 
 
-        public Snake(String name, int birthYear, boolean predator, double dailyCalories, int eggSize, int tailSize) {
-            super(name, birthYear, predator, dailyCalories, eggSize, tailSize);
+        public Snake(String name, int age, boolean predator, double dailyCalories, int eggSize, int tailSize) {
+            super(name, age, predator, dailyCalories, eggSize, tailSize);
         }
 
         @Override
@@ -242,12 +242,12 @@ public class Q9 {
                     "eggSize=" + eggSize +
                     ", tailSize=" + tailSize +
                     ", name='" + name + '\'' +
-                    ", birthYear=" + birthYear +
+                    ", age=" + age +
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
-        
+
         @Override
         public void speak(){
             System.out.println("i am a Snake");
@@ -257,8 +257,8 @@ public class Q9 {
     public static class Parrot extends Bird{
 
 
-        public Parrot(String name, int birthYear, boolean predator, double dailyCalories, int beakSize, int wingSpan) {
-            super(name, birthYear, predator, dailyCalories, beakSize, wingSpan);
+        public Parrot(String name, int age, boolean predator, double dailyCalories, int beakSize, int wingSpan) {
+            super(name, age, predator, dailyCalories, beakSize, wingSpan);
         }
 
         @Override
@@ -267,12 +267,12 @@ public class Q9 {
                     "beakSize=" + beakSize +
                     ", wingSpan=" + wingSpan +
                     ", name='" + name + '\'' +
-                    ", birthYear=" + birthYear +
+                    ", age=" + age +
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
-        
+
         @Override
         public void speak() {
             System.out.println("i am a Parrot");
@@ -281,8 +281,8 @@ public class Q9 {
 
     public static class Peacock extends Bird{
 
-        public Peacock(String name, int birthYear, boolean predator, double dailyCalories, int beakSize, int wingSpan) {
-            super(name, birthYear, predator, dailyCalories, beakSize, wingSpan);
+        public Peacock(String name, int age, boolean predator, double dailyCalories, int beakSize, int wingSpan) {
+            super(name, age, predator, dailyCalories, beakSize, wingSpan);
         }
 
         @Override
@@ -291,12 +291,12 @@ public class Q9 {
                     "beakSize=" + beakSize +
                     ", wingSpan=" + wingSpan +
                     ", name='" + name + '\'' +
-                    ", birthYear=" + birthYear +
+                    ", age=" + age +
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
-        
+
         @Override
         public void speak() {
             System.out.println("i am a Peacock");
@@ -307,8 +307,8 @@ public class Q9 {
         protected String type;
         protected String primaryColor;
 
-        public Dog(String name, int birthYear, boolean predator, double dailyCalories, int dailyMilk, int birthMonths, String type, String primaryColor) {
-            super(name, birthYear, predator, dailyCalories, dailyMilk, birthMonths);
+        public Dog(String name, int age, boolean predator, double dailyCalories, int dailyMilk, int birthMonths, String type, String primaryColor) {
+            super(name, age, predator, dailyCalories, dailyMilk, birthMonths);
             this.type = type;
             this.primaryColor = primaryColor;
         }
@@ -337,12 +337,12 @@ public class Q9 {
                     ", dailyMilk=" + dailyMilk +
                     ", birthMonths=" + birthMonths +
                     ", name='" + name + '\'' +
-                    ", birthYear=" + birthYear +
+                    ", age=" + age +
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
-        
+
         @Override
         public void speak() {
             System.out.println("i am a Dog");
@@ -353,8 +353,8 @@ public class Q9 {
         protected int diveDepth;
         protected int length;
 
-        public Whale(String name, int birthYear, boolean predator, double dailyCalories, int dailyMilk, int birthMonths, int diveDepth, int length) {
-            super(name, birthYear, predator, dailyCalories, dailyMilk, birthMonths);
+        public Whale(String name, int age, boolean predator, double dailyCalories, int dailyMilk, int birthMonths, int diveDepth, int length) {
+            super(name, age, predator, dailyCalories, dailyMilk, birthMonths);
             this.diveDepth = diveDepth;
             this.length = length;
         }
@@ -383,12 +383,12 @@ public class Q9 {
                     ", dailyMilk=" + dailyMilk +
                     ", birthMonths=" + birthMonths +
                     ", name='" + name + '\'' +
-                    ", birthYear=" + birthYear +
+                    ", age=" + age +
                     ", predator=" + predator +
                     ", dailyCalories=" + dailyCalories +
                     '}';
         }
-        
+
         @Override
         public void speak() {
             System.out.println("i am a Whale");
